@@ -1,0 +1,27 @@
+Upgrade Ideas for Your Todo + Auth Project:
+User-specific Todos:
+
+Each todo tied to a user (ref to user._id)
+
+Only owner can access/edit/delete
+
+Pagination & Search:
+
+/todos?search=exam&page=2
+
+Todo Categories / Labels:
+
+Add tags like “Work”, “Urgent”, “School”
+
+Due Dates & Reminders (for future):
+
+Save dueDate, auto-mark overdue
+
+Cloud Deploy (Render, Cyclic, Vercel):
+
+Public API ban jaaye, postman link share kar sake
+
+Frontend Integration (React or Next.js):
+
+Auth + todos frontend bana le bro, pura app ho jaayega 🚀
+
