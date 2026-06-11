@@ -5,6 +5,13 @@ const todoRoutes = require("./routes/productRoute");
 const userRoutes = require("./routes/userRoute");
 
 app.use(express.json());
+app.use(
+    cors({
+        origin: '*',
+        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+        credentials: true,
+    })
+);
 app.get("/", (req, res) => {
     res.send("todo backend running successfully")
 })
