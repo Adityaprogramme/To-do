@@ -5,6 +5,9 @@ const todoRoutes = require("./routes/productRoute");
 const userRoutes = require("./routes/userRoute");
 
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("todo backend running successfully")
+})
 app.use("/api/post", todoRoutes);
 app.use('/api/user', userRoutes)
 
