@@ -8,6 +8,10 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("todo backend running successfully")
 })
+
+app.get("/", (req, res) => {
+    res.json({ message: "todo backend running successfully" });
+})
 app.use("/api/post", todoRoutes);
 app.use('/api/user', userRoutes)
 
