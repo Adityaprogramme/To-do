@@ -25,7 +25,7 @@ const addTodo = async (req, res) => {
 // Fetch all todos (populate user data)
 const fetchTodo = async (req, res) => {
     try {
-        const todos = await Task.find({ user: req.user.id }).populate('user', 'email'); // Populate user details if needed
+        const todos = await Task.find({ user: req.user.id }).populate('user', 'Name'); // Populate user details if needed
         res.status(200).json(todos);
     } catch (error) {
         res.status(500).json({ message: "NO TODOS", error: error.message });
