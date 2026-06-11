@@ -1,4 +1,6 @@
 // app.js
+const cors = require('cors')
+
 const express = require("express");
 const app = express();
 const todoRoutes = require("./routes/productRoute");
@@ -7,8 +9,10 @@ const userRoutes = require("./routes/userRoute");
 app.use(express.json());
 app.use(
     cors({
-        origin: '*',
-        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+        origin: [
+            "http://localhost:5174",
+            "http://localhost:5173"
+        ]
         credentials: true,
     })
 );
