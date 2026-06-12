@@ -20,9 +20,10 @@ const registerUser = async(req, res) =>{
     console.log(req.body); // Check what exactly is coming in
 
 
-}
+};
 
 const loginUser = async(req, res) =>{
+    try {
     const {Name, Password} = req.body;
 
     //find user in db
@@ -40,6 +41,9 @@ const loginUser = async(req, res) =>{
   const token = generateToken(findUser._id);
   res.status(200).json({ message: "Login successful", token });
   
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
 };
 
 module.exports = {registerUser, loginUser}
